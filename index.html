@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Únete a Cocobit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+*{ box-sizing: border-box; }
+html, body{ margin: 0; min-height: 100%; }
+body{
+  font-family: 'Nunito Sans', system-ui, sans-serif;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+.jt-wrap{
+  width: 100%;
+  max-width: 960px;
+}
+.jt-card{
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+  padding: 2.5rem;
+  border-radius: 16px;
+  background: #C9A6F5;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  font-family: 'Nunito Sans', sans-serif;
+}
+.jt-circle{
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #5B0E9E;
+  transform: translateX(-50%) scale(0);
+  transition: transform 1.1s ease-in-out;
+  z-index: 0;
+}
+.jt-card:hover .jt-circle,
+.jt-card:focus-within .jt-circle{
+  transform: translateX(-50%) scale(120);
+}
+.jt-content{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+.jt-title{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: clamp(36px, 7vw, 52px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+  color: #3B0764;
+  transition: color 0.9s ease-in-out;
+}
+button.jt-btn{
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.35);
+  padding: 12px 8px 12px 20px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.9s ease-in-out;
+}
+button.jt-btn:focus-visible{
+  outline: 3px solid #3B0764;
+  outline-offset: 3px;
+}
+.jt-btn-text{
+  color: #3B0764;
+  transition: color 0.9s ease-in-out;
+}
+.jt-arrow{
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7C3AED;
+}
+.jt-arrow svg{
+  width: 18px;
+  height: 18px;
+}
+.jt-card:hover .jt-title,
+.jt-card:focus-within .jt-title,
+.jt-card:hover .jt-btn-text,
+.jt-card:focus-within .jt-btn-text{
+  color: #ffffff;
+}
+.jt-card:hover button.jt-btn,
+.jt-card:focus-within button.jt-btn{
+  background: rgba(255,255,255,0.18);
+}
+@media (max-width: 520px){
+  .jt-card{ padding: 1.5rem; }
+}
+@media (prefers-reduced-motion: reduce){
+  .jt-circle, .jt-title, .jt-btn-text, button.jt-btn{ transition-duration: 0.01s; }
+}
+</style>
+</head>
+<body>
+<main class="jt-wrap">
+  <div class="jt-card">
+    <div class="jt-circle"></div>
+    <div class="jt-content">
+      <h1 class="jt-title">Únete a<br>Cocobit.</h1>
+      <button class="jt-btn" type="button">
+        <span class="jt-btn-text">Explora nuestras oportunidades laborales</span>
+        <span class="jt-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</main>
+</body>
+</html>
