@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>try{document.querySelector('meta[name="color-scheme"]').content=localStorage.getItem("color-scheme")??"light dark"}catch(e){}</script>
+<title>Instalar Claude Code · Cocobit</title>
+<meta name="description" content="Cómo instalar Claude Code en Windows, macOS, Linux y WSL: requisitos, comandos oficiales, inicio de sesión, actualización y diagnóstico.">
+<link rel="canonical" href="https://www.cocobit.online/guias/instalar-claude-code.html">
+<meta name="theme-color" content="#F7F7F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1E1E1E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Cocobit">
+<meta property="og:title" content="Instalar Claude Code · Cocobit">
+<meta property="og:description" content="Cómo instalar Claude Code en Windows, macOS, Linux y WSL: requisitos, comandos oficiales, inicio de sesión, actualización y diagnóstico.">
+<meta property="og:url" content="https://www.cocobit.online/guias/instalar-claude-code.html">
+<meta property="og:image" content="https://www.cocobit.online/assets/img/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="Icono de Cocobit: una palmera blanca sobre fondo carbón">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400..700&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script src="/assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/"><img src="/assets/img/favicon.svg" width="36" height="36" alt=""><span>Cocobit</span></a>
+    <nav class="site-nav" aria-label="Principal">
+      <button class="menu-button" type="button" popovertarget="site-menu" popovertargetaction="toggle" aria-controls="site-menu" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+      <div id="site-menu" class="site-menu" popover="auto">
+        <div class="menu-head">
+          <a class="brand" href="/"><img src="/assets/img/favicon.svg" width="36" height="36" alt=""><span>Cocobit</span></a>
+          <button class="btn-icon" type="button" popovertarget="site-menu" popovertargetaction="hide" aria-label="Cerrar menú">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+        <ul class="menu-main">
+          <li class="nav-dropdown">
+            <button class="dropdown-trigger nav-link" type="button" aria-expanded="false" aria-controls="guides-menu" popovertarget="guides-menu" data-current>Guías <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            <p class="group-label">Guías</p>
+            <div id="guides-menu" class="dropdown-panel">
+          <div class="mega-col">
+            <p class="mega-title">Empezar</p>
+            <ul>
+            <li><a class="mega-link" href="/guias/instalar-claude-code.html" aria-current="page"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17l6-5-6-5M12 19h8"/></svg></span><span><strong>Instalar Claude Code</strong><small>Windows, macOS, Linux y WSL</small></span></a></li>
+            <li><a class="mega-link" href="/guias/primeros-pasos.html"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5"/></svg></span><span><strong>Primeros pasos</strong><small>CLAUDE.md, permisos y plan mode</small></span></a></li>
+            <li><a class="mega-link" href="/guias/herramientas-claude.html"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span><span><strong>Herramientas de Claude</strong><small>Qué usar y cuándo</small></span></a></li>
+            </ul>
+          </div>
+          <div class="mega-col">
+            <p class="mega-title">Agilizar</p>
+            <ul>
+            <li><a class="mega-link" href="/guias/skills-y-plugins.html"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg></span><span><strong>Skills y plugins</strong><small>Convierte tus procesos en comandos</small></span></a></li>
+            <li><a class="mega-link" href="/guias/mcp-y-conectores.html"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7V3M15 7V3M6 7h12v4a6 6 0 0 1-12 0zM12 17v4"/></svg></span><span><strong>MCP y conectores</strong><small>Figma, Notion, GitHub y más</small></span></a></li>
+            <li><a class="mega-link" href="/guias/automatizar.html"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><span><strong>Automatizar</strong><small>Hooks, scripts y tareas programadas</small></span></a></li>
+            </ul>
+          </div>
+            </div>
+          </li>
+        <li><a class="nav-link" href="/guias/herramientas-claude.html">Herramientas</a></li>
+        <li><a class="nav-link" href="/recursos/atajos.html">Atajos</a></li>
+          <li class="nav-secondary"><a class="nav-link" href="/#unete">Únete</a></li>
+        </ul>
+        <a class="btn btn-primary menu-cta" href="/guias/instalar-claude-code.html">Instalar Claude Code</a>
+      </div>
+    </nav>
+    <button class="btn-icon theme-toggle" type="button">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <span class="visually-hidden label-dark">Cambiar a tema oscuro</span>
+      <span class="visually-hidden label-light">Cambiar a tema claro</span>
+    </button>
+    <a class="btn btn-primary header-cta" href="/guias/instalar-claude-code.html">Instalar</a>
+  </div>
+</header>
+<main id="contenido">
+<div class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Ruta"><ol><li><a href="/">Inicio</a></li><li><a href="/#guias">Guías</a></li><li aria-current="page">Instalar Claude Code</li></ol></nav>
+    <span class="eyebrow">Guía 1 · Empezar</span>
+    <h1>Instalar Claude Code</h1>
+    <p class="lead">Requisitos, el comando para tu sistema, el primer inicio de sesión y cómo mantenerlo actualizado. Cinco minutos.</p>
+    <div class="page-meta"><span>Lectura: 6 min</span><span>Revisado: noviembre de 2026</span></div>
+  </div>
+</div>
+<div class="container doc">
+  <aside class="toc" aria-label="En esta página">
+    <div>
+      <details>
+        <summary>En esta página</summary>
+        <ol>
+          <li><a href="#requisitos">Requisitos</a></li>
+          <li><a href="#instalar">Instala según tu sistema</a></li>
+          <li><a href="#iniciar">Inicia y conecta tu cuenta</a></li>
+          <li><a href="#actualizar">Actualiza y diagnostica</a></li>
+          <li><a href="#desinstalar">Desinstalar</a></li>
+        </ol>
+      </details>
+    </div>
+  </aside>
+  <article class="prose">
+<section id="requisitos" aria-labelledby="requisitos-h">
+<h2 id="requisitos-h">Requisitos</h2>
+<ul>
+  <li><strong>Sistema:</strong> macOS 13+, Windows 10 (1809+) o Windows Server 2019+, Ubuntu 20.04+, Debian 10+ o Alpine 3.19+.</li>
+  <li><strong>Equipo:</strong> 4 GB de RAM o más, procesador x64 o ARM64 y conexión a internet.</li>
+  <li><strong>Shell:</strong> Bash, Zsh, PowerShell o CMD.</li>
+  <li><strong>Cuenta:</strong> un plan Pro, Max, Ultra, Team o Enterprise, o una cuenta de Claude Console. <strong>El plan gratuito de Claude.ai no incluye Claude Code.</strong></li>
+  <li><strong>Node.js 22+:</strong> solo si instalas con npm.</li>
+</ul>
+</section>
+<section id="instalar" aria-labelledby="instalar-h">
+<h2 id="instalar-h">Instala según tu sistema</h2>
+<div class="tabs">
+  <div class="tablist" focusgroup="tablist nomemory" aria-label="Sistema operativo">
+    <button type="button" id="t-mac" data-os="macos" aria-selected="true" focusgroupstart>macOS</button>
+    <button type="button" id="t-linux" data-os="linux">Linux / WSL</button>
+    <button type="button" id="t-win" data-os="windows">Windows</button>
+  </div>
+  <div class="tab-panels">
+    <div role="tabpanel" aria-labelledby="t-mac" tabindex="0"><div class="panel-inner">
+      <p><strong>Instalador nativo (recomendado).</strong> Se actualiza solo en segundo plano.</p>
+      <div class="code">
+  <div class="code-label"><span>Terminal</span>
+    <span class="copy">
+      <button type="button" class="copy-button" command="--copy" commandfor="c1" aria-label="Copiar: Terminal">
+        <svg class="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        <svg class="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+        <span>Copiar</span>
+      </button>
+      <span class="tip" role="status"></span>
+    </span>
+  </div>
+  <pre tabindex="0"><code id="c1">curl -fsSL https://claude.ai/install.sh | bash</code></pre>
+</div>
+      <p><strong>Homebrew.</strong> No se actualiza solo; usa <code>brew upgrade claude-code</code>.</p>
+      <div class="code">
+  <div class="code-label"><span>Terminal</span>
+    <span class="copy">
+      <button type="button" class="copy-button" command="--copy" commandfor="c2" aria-label="Copiar: Terminal">
+        <svg class="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        <svg class="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+        <span>Copiar</span>
+      </button>
+      <span class="tip" role="status"></span>
+    </span>
+  </div>
+  <pre tabindex="0"><code id="c2">brew install --cask claude-code</code></pre>
+</div>
+    </div></div>
+    <div role="tabpanel" aria-labelledby="t-linux" hidden><div class="panel-inner">
+      <p><strong>Instalador nativo (recomendado).</strong> Funciona igual en Linux y en WSL.</p>
+      <div class="code">
+  <div class="code-label"><span>Terminal</span>
+    <span class="copy">
+      <button type="button" class="copy-button" command="--copy" commandfor="c3" aria-label="Copiar: Terminal">
+        <svg class="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        <svg class="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+        <span>Copiar</span>
+      </button>
+      <span class="tip" role="status"></span>
+    </span>
+  </div>
+  <pre tabindex="0"><code id="c3">curl -fsSL https://claude.ai/install.sh | bash</code></pre>
+</div>
+      <p>También hay paquetes para apt, dnf y apk: <a href="https://code.claude.com/docs/en/setup.md" rel="noopener">consulta la documentación</a>.</p>
+    </div></div>
+    <div role="tabpanel" aria-labelledby="t-win" hidden><div class="panel-inner">
+      <p><strong>PowerShell (recomendado).</strong></p>
+      <div class="code">
+  <div class="code-label"><span>PowerShell</span>
+    <span class="copy">
+      <button type="button" class="copy-button" command="--copy" commandfor="c4" aria-label="Copiar: PowerShell">
+        <svg class="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        <svg class="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+        <span>Copiar</span>
+      </button>
+      <span class="tip" role="status"></span>
+    </span>
+  </div>
+  <pre tabindex="0"><code id="c4">irm https://claude.ai/install.ps1 | iex</code></pre>
+</div>
+      <p><strong>Símbolo del sistema (CMD).</strong></p>
+      <div class="code">
+  <div class="code-label"><span>CMD</span>
+    <span class="copy">
+      <button type="button" class="copy-button" command="--copy" commandfor="c5" aria-label="Copiar: CMD">
+        <svg class="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        <svg class="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+        <span>Copiar</span>
+      </button>
+      <span class="tip" role="status"></span>
+    </span>
+  </div>
+  <pre tabindex="0"><code id="c5">curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd</code></pre>
+</div>
+      <p><strong>WinGet.</strong> No se actualiza solo; usa <code>winget upgrade Anthropic.ClaudeCode</code>.</p>
+      <div class="code">
+  <div class="code-label"><span>PowerShell</span>
+    <span class="copy">
+      <button type="button" class="copy-button" command="--copy" commandfor="c6" aria-label="Copiar: PowerShell">
+        <svg class="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        <svg class="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+        <span>Copiar</span>
+      </button>
+      <span class="tip" role="status"></span>
+    </span>
+  </div>
+  <pre tabindex="0"><code id="c6">winget install Anthropic.ClaudeCode</code></pre>
+</div>
+      <div class="note"><p><strong>Git for Windows:</strong> es recomendable, pero no obligatorio. Sin él, Claude Code usa PowerShell como shell; con él tiene la herramienta Bash.</p></div>
+    </div></div>
+  </div>
+</div>
+<h3>Alternativa: npm</h3>
+<p>Requiere Node.js 22 o superior. No uses <code>sudo</code>.</p>
+<div class="code">
+  <div class="code-label"><span>Terminal</span>
+    <span class="copy">
+      <button type="button" class="copy-button" command="--copy" commandfor="c7" aria-label="Copiar: Terminal">
+        <svg class="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        <svg class="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+        <span>Copiar</span>
+      </button>
+      <span class="tip" role="status"></span>
+    </span>
+  </div>
+  <pre tabindex="0"><code id="c7">npm install -g @anthropic-ai/claude-code@latest</code></pre>
+</div>
+</section>
+<section id="iniciar" aria-labelledby="iniciar-h">
+<h2 id="iniciar-h">Inicia y conecta tu cuenta</h2>
+<ol class="steps">
+  <li><p>Comprueba que quedó instalado:</p><div class="code">
+  <div class="code-label"><span>Terminal</span>
+    <span class="copy">
+      <button type="button" class="copy-button" command="--copy" commandfor="c8" aria-label="Copiar: Terminal">
+        <svg class="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        <svg class="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+        <span>Copiar</span>
+      </button>
+      <span class="tip" role="status"></span>
+    </span>
+  </div>
+  <pre tabindex="0"><code id="c8">claude --version</code></pre>
+</div></li>
+  <li><p>Entra en la carpeta de tu proyecto y arranca Claude Code:</p><div class="code">
+  <div class="code-label"><span>Terminal</span>
+    <span class="copy">
+      <button type="button" class="copy-button" command="--copy" commandfor="c9" aria-label="Copiar: Terminal">
+        <svg class="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        <svg class="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+        <span>Copiar</span>
+      </button>
+      <span class="tip" role="status"></span>
+    </span>
+  </div>
+  <pre tabindex="0"><code id="c9">cd mi-proyecto
+claude</code></pre>
+</div></li>
+  <li><p>La primera vez se abre el navegador para iniciar sesión. Dentro de la sesión puedes usar <code>/login</code> y <code>/logout</code> cuando quieras.</p></li>
+  <li><p>Pide algo concreto, por ejemplo: <em>«Explícame la estructura de este proyecto»</em>.</p></li>
+</ol>
+</section>
+<section id="actualizar" aria-labelledby="actualizar-h">
+<h2 id="actualizar-h">Actualiza y diagnostica</h2>
+<p>La instalación nativa se actualiza sola en segundo plano. Para forzarlo:</p>
+<div class="code">
+  <div class="code-label"><span>Terminal</span>
+    <span class="copy">
+      <button type="button" class="copy-button" command="--copy" commandfor="c10" aria-label="Copiar: Terminal">
+        <svg class="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        <svg class="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+        <span>Copiar</span>
+      </button>
+      <span class="tip" role="status"></span>
+    </span>
+  </div>
+  <pre tabindex="0"><code id="c10">claude update</code></pre>
+</div>
+<p>Si algo falla, <code>claude doctor</code> revisa la instalación sin iniciar sesión. Dentro de una sesión, <code>/doctor</code> también propone correcciones.</p>
+<div class="code">
+  <div class="code-label"><span>Terminal</span>
+    <span class="copy">
+      <button type="button" class="copy-button" command="--copy" commandfor="c11" aria-label="Copiar: Terminal">
+        <svg class="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        <svg class="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+        <span>Copiar</span>
+      </button>
+      <span class="tip" role="status"></span>
+    </span>
+  </div>
+  <pre tabindex="0"><code id="c11">claude doctor</code></pre>
+</div>
+<div class="note"><p><strong>Canal de actualizaciones:</strong> en <code>/config</code> puedes elegir <code>latest</code> (por defecto) o <code>stable</code>.</p></div>
+</section>
+<section id="desinstalar" aria-labelledby="desinstalar-h">
+<h2 id="desinstalar-h">Desinstalar</h2>
+<p>Instalación nativa en macOS, Linux o WSL:</p>
+<div class="code">
+  <div class="code-label"><span>Terminal</span>
+    <span class="copy">
+      <button type="button" class="copy-button" command="--copy" commandfor="c12" aria-label="Copiar: Terminal">
+        <svg class="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        <svg class="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+        <span>Copiar</span>
+      </button>
+      <span class="tip" role="status"></span>
+    </span>
+  </div>
+  <pre tabindex="0"><code id="c12">rm -f ~/.local/bin/claude
+rm -rf ~/.local/share/claude</code></pre>
+</div>
+<p>Si instalaste con Homebrew, WinGet o npm, desinstala con ese mismo gestor. Más detalles en <a href="https://code.claude.com/docs/en/troubleshoot-install.md" rel="noopener">la guía oficial de problemas de instalación</a>.</p>
+</section>
+<nav class="next-guide" aria-label="Más guías"><a class="next" href="/guias/primeros-pasos.html"><small>Siguiente</small><span>Primeros pasos →</span></a></nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="/"><img src="/assets/img/favicon.svg" width="36" height="36" alt=""><span>Cocobit</span></a>
+        <p>Guías en español para instalar Claude Code y trabajar con las herramientas de Claude todos los días.</p>
+      </div>
+      <div>
+        <h2>Guías</h2>
+        <ul>
+          <li><a href="/guias/instalar-claude-code.html">Instalar Claude Code</a></li>
+          <li><a href="/guias/primeros-pasos.html">Primeros pasos</a></li>
+          <li><a href="/guias/herramientas-claude.html">Herramientas de Claude</a></li>
+          <li><a href="/guias/skills-y-plugins.html">Skills y plugins</a></li>
+          <li><a href="/guias/mcp-y-conectores.html">MCP y conectores</a></li>
+          <li><a href="/guias/automatizar.html">Automatizar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Recursos</h2>
+        <ul>
+          <li><a href="/recursos/atajos.html">Atajos y comandos</a></li>
+          <li><a href="/#unete">Únete a Cocobit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Documentación oficial</h2>
+        <ul>
+          <li><a href="https://code.claude.com/docs" rel="noopener">Docs de Claude Code</a></li>
+          <li><a href="https://support.claude.com" rel="noopener">Centro de ayuda de Claude</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">© <span data-year>2026</span> Cocobit. Sitio independiente y comunitario, <strong>no afiliado ni respaldado por Anthropic</strong>. Claude y Claude Code son marcas de Anthropic. Los comandos se revisaron con la documentación oficial en noviembre de 2026; si algo cambió, la documentación oficial manda.</p>
+  </div>
+</footer>
+</body>
+</html>
